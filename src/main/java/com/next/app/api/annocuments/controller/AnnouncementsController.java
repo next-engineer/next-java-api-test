@@ -45,7 +45,7 @@ public class AnnouncementsController {
 
     @PutMapping("/{announcement_id}")
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @Operation(summary = "공지사항 수정", description = "현재 공지사항은 게시 후 수정을 할 수 없습니다.")
+    @Operation(summary = "공지사항 수정", description = "현재 공지사항은 게시 후 수정이 불가능 합니다.")
     public void updateAnnouncements(@PathVariable Long announcement_id, @RequestBody Announcements announcements) {
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "공지사항은 수정할 수 없습니다.");
     }
